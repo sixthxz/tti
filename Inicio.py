@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Cloudflare AI Playground",
-    page_icon="pages/lib/icon.png"
+    page_icon="pages/media/icon.png"
 )
 
 """
