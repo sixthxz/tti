@@ -11,7 +11,7 @@ account_id = st.secrets["CLOUDFLARE_ACCOUNT_ID"]
 
 st.set_page_config(
     page_title="Imagen a Imagen",
-    page_icon="pages/lib/icon.png"
+    page_icon="lib/icon.png"
 )
 
 " ## Imagen a imagen"

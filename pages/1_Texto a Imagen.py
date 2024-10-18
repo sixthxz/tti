@@ -6,7 +6,7 @@ api_token = st.secrets["CLOUDFLARE_API_TOKEN"]
 
 st.set_page_config(
     page_title="Texto a Imagen",
-    page_icon="pages/lib/icon.png"
+    page_icon="lib/icon.png"
 )
 
 " ## Texto a Imagen"
