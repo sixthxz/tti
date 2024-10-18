@@ -20,7 +20,6 @@ with st.form("text_to_image"):
         "Elige un modelo",
         options=(
             "@cf/lykon/dreamshaper-8-lcm",
-            "@cf/black-forest-labs/flux-1-schnell",
             "@cf/bytedance/stable-diffusion-xl-lightning",
             "@cf/stabilityai/stable-diffusion-xl-base-1.0",
         ),
