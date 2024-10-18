@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Para eliminar barras de desplazamiento */
+        }
+        iframe {
+            border: none; /* Eliminar bordes */
+            width: calc(100vw + 20px); /* Ancho mayor que la ventana */
+            height: calc(130vh + 20px); /* Alto mayor que la ventana */
+            position: relative; /* Para ajustar el posicionamiento */
+            top: -10px; /* Mover hacia arriba */
+            left: -10px; /* Mover hacia la izquierda */
+        }
+    </style>
+</head>
+<body>
+    <iframe src='https://ttipython.streamlit.app/?embed=True&embed_options=dark_theme,disable_scrolling'></iframe>
+</body>
+</html>
