@@ -15,7 +15,6 @@ st.set_page_config(
 """
 
 with st.form("text_to_image"):
-    # All models at https://developers.cloudflare.com/workers-ai/models/
     model = st.selectbox(
         "Elige un modelo",
         options=(
@@ -24,13 +23,13 @@ with st.form("text_to_image"):
             "@cf/stabilityai/stable-diffusion-xl-base-1.0",
         ),
     )
-    prompt = st.text_area("Prompt")
+    prompt = st.text_area(label="Describe de manera detallada la imagen que deseas generar")
     submitted = st.form_submit_button("Generar")
     if submitted:
         headers = {
             "Authorization": f"Bearer {api_token}",
         }
-        with st.spinner("Generating..."):
+        with st.spinner("Generando..."):
             url = f"https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/run/{model}"
             response = requests.post(
                 url,

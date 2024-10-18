@@ -6,13 +6,13 @@ import requests
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 
+api_token = st.secrets["CLOUDFLARE_API_TOKEN"]
+account_id = st.secrets["CLOUDFLARE_ACCOUNT_ID"]
+
 st.set_page_config(
     page_title="Editar Imagen",
     page_icon="pages/lib/icon.png"
 )
-
-api_token = st.secrets["CLOUDFLARE_API_TOKEN"]
-account_id = st.secrets["CLOUDFLARE_ACCOUNT_ID"]
 
 " ## Editar imagen"
 """

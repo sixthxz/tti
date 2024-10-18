@@ -6,13 +6,13 @@ import requests
 import streamlit as st
 import numpy as np
 
+api_token = st.secrets["CLOUDFLARE_API_TOKEN"]
+account_id = st.secrets["CLOUDFLARE_ACCOUNT_ID"]
+
 st.set_page_config(
     page_title="Imagen a Imagen",
     page_icon="pages/lib/icon.png"
 )
-
-api_token = st.secrets["CLOUDFLARE_API_TOKEN"]
-account_id = st.secrets["CLOUDFLARE_ACCOUNT_ID"]
 
 " ## Imagen a imagen"
 st.markdown("*Ajustando parametros del modelo para mejores resultados")
