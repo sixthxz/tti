@@ -37,7 +37,7 @@ def image_to_int_array(image, format="PNG"):
 if masking_result.image_data is not None:
     # st.image(masking_result.image_data, caption="Your masking")
     with st.form("Prompt"):
-        prompt = st.text_input(label="Describe las modificaciones que quieres")
+        prompt = st.text_input(label="Que te gustaría reemplazar de esta imagen?")
         submitted = st.form_submit_button("Generar")
         if submitted:
             model = "@cf/runwayml/stable-diffusion-v1-5-inpainting"
@@ -57,8 +57,6 @@ if masking_result.image_data is not None:
                 )
                 if response.ok:
                     st.image(response.content, caption=prompt)
-                    f"Image Array is {len(image_array)} entries, first 10:"
-                    f"Mask Array is {len(mask_array)} entries, first 10:"
                 else:
                     st.warning(f"Error {response.status_code}")
                     st.warning(response.reason)
@@ -67,4 +65,3 @@ if masking_result.image_data is not None:
                     st.code(image_array[:10])
                     f"Mask Array is {len(mask_array)} entries, first 10:"
                     st.code(mask_array[:10])
-                   
